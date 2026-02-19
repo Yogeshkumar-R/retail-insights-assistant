@@ -1,1 +1,1 @@
-# retail-agentic-assistant-
+# retail-agentic-assistant
