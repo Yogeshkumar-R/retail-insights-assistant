@@ -108,8 +108,6 @@ if "db_loaded" not in st.session_state:
 if "api_key_set" not in st.session_state:
     st.session_state.api_key_set = bool(os.getenv("GOOGLE_API_KEY"))
 
-
-# ─── Sidebar ──────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("## 🛍️ Retail Insights")
     st.markdown("---")
