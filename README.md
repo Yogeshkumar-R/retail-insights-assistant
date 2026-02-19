@@ -105,3 +105,5 @@ For production scale, the architecture uses:
 - **Pinecone / ChromaDB** for vector search (RAG)
 - **Redis** for prompt caching
 - **LangSmith** for monitoring
+
+  ## try demo: [App](https://retains.streamlit.app/)
