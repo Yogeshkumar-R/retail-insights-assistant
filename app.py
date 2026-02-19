@@ -5,6 +5,9 @@ Run with: streamlit run app.py
 import streamlit as st
 import pandas as pd
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ─── Page Config ──────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -111,15 +114,7 @@ with st.sidebar:
     st.markdown("## 🛍️ Retail Insights")
     st.markdown("---")
 
-    # API Key input
-    st.markdown("### 🔑 API Configuration")
-    api_key = st.text_input(
-        "Google Gemini API Key",
-        type="password",
-        value=os.getenv("GOOGLE_API_KEY", ""),
-        help="Get your key at https://aistudio.google.com/",
-        key="api_key_input",
-    )
+    api_key = os.getenv("GOOGLE_API_KEY")
     if api_key:
         os.environ["GOOGLE_API_KEY"] = api_key
         st.session_state.api_key_set = True
